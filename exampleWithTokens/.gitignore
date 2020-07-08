@@ -2,3 +2,5 @@ calcScanner.c
 calcScanner.tab.c
 calcScanner.tab.h
 calcScanner
+calcScannerWithoutBison
+calcScannerWithoutBison.c
