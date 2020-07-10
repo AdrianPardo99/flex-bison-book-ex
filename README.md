@@ -7,7 +7,7 @@ __Sintaxis inicial FLEX__
 ```
 %{
 Código de variables, bibliotecas y algunas definiciones escritas o ejemplificadas de lenguaje C
-
+Bibliotecas proporcionadas por Bison
 Tokens para hacer uso de los mismos en el lado de trabajar con un analizador sintactico
 
 %}
@@ -20,4 +20,24 @@ Expresiones Regulares (Regex) que permiten crear o dar un comportamiento especif
 
 Escritura de función main o de funciones externas para trabajar.
 
+```
+
+__Sintaxis inicial Bison__
+
+```
+%{
+  /*Bibliotecas, definicion de funciones*/
+  int yylex();
+  void yyerror(char *);
+%}
+
+/* Apartado de tokens */
+%token TOKEN_NAME
+
+%%
+/*Reglas sintacticas y semanticas*/
+
+ReglaProductora: Reglas | Regla {/*Accion semantica de atributos sintetizados*/};
+
+%%
 ```
