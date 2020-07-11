@@ -8,6 +8,8 @@
 %token NUMBER
 %token ADD SUB MUL DIV ABS
 %token EOL
+/*Version dos con operadores de parentesis*/
+%token OP CP
 
 %%
 
@@ -27,6 +29,8 @@ factor: term
 
 term: NUMBER
   | ABS term          {$$= $2>=0 ? $2: -$2;}
+  /*Version dos con operadores de parentesis*/
+  | OP exp CP         {$$=$2;}
   ;
 %%
 

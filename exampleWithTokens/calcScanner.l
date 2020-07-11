@@ -12,6 +12,9 @@
 [0-9]+  {yylval=atoi(yytext);return NUMBER;}
 \n      {return EOL;}
 [ \t]   {/* Ignora los espacios en blanco */}
-.       {printf("Caracter misterioso: %c\n",*yytext);}
+"("     {return OP;}
+")"     {return CP;}
+"//".*  {}
+  .       {printf("Caracter misterioso: %c\n",*yytext);}
 
 %%
