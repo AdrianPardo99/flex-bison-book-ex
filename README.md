@@ -4,7 +4,7 @@ Pequeños programas donde se puede trabajar con herramientas de análisis léxic
 
 __Sintaxis inicial FLEX__
 
-```
+```flex
 %{
 Código de variables, bibliotecas y algunas definiciones escritas o ejemplificadas de lenguaje C
 Bibliotecas proporcionadas por Bison
@@ -24,7 +24,7 @@ Escritura de función main o de funciones externas para trabajar.
 
 __Sintaxis inicial Bison__
 
-```
+```bison
 %{
   /*Bibliotecas, definicion de funciones*/
   int yylex();
